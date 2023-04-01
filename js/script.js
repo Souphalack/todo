@@ -1,4 +1,4 @@
-// Step 1  find the element
+// Step 1  find the DOM element
 // Grab everything from the HTML page
 var addTaskButton = document.getElementById("add-task");
 var newTaskInput = document.getElementById("task-input");
