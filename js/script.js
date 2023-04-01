@@ -15,7 +15,12 @@ function onAddTaskClicked(event){
     var taskHTML = template.replace("<!--TASK_NAME -->");
     
     todoListContainer.insertAdjacentHTML('afterbegin', taskHTML);
+}
 
+function onTodoListContainerClicked(event){
+    while (!targetElement.classlist.contains("task")){
+        targetElement = targetElement.
+    }
 }
 
 // Step 3 link to event handler 
