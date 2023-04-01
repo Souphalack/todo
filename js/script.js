@@ -12,7 +12,7 @@ function onAddTaskClicked(event){
     var taskName = newTaskInput.value; //Copy the contens from the text box
     newTaskInput.value = ""; //, when i click the button, i want to read the content and clear it
    
-    var taskHTML = template.replace("<!--TASK_NAME -->");
+    var taskHTML = template.replace("<!-- TASK_NAME -->", taskName);
     
     todoListContainer.insertAdjacentHTML('afterbegin', taskHTML);
 }
