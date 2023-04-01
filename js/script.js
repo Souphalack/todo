@@ -9,6 +9,7 @@ var template = templateContainer.innerHTML;
 // Step 2 Write the behaviour
 // Write the fuctionality 
 function onAddTaskClicked(event){
+    console.log("onAddTaskClicked function called");
     var taskName = newTaskInput.value; //Copy the contens from the text box
     newTaskInput.value = ""; //, when i click the button, i want to read the content and clear it
    
