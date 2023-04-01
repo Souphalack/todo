@@ -19,14 +19,16 @@ function onAddTaskClicked(event){
 //when an Event occurs, the event contains info about the element that was clicked 
 // Take the target element, if the target element NOT contain Task - get its parent
 function onTodoListContainerClicked(event){
-    while (!targetElement.classlist.contains("task")){
+    while (!targetElement.classlist.contains("task")) {
         targetElement = targetElement.parentElement;
     }
-    var checkbox = targetElement.querySelector(".checkbox");
-    if (checkbox.checked){
+
+    var checkbox = targetElement.querySelector(".checkbox"); 
+
+    if (checkbox.checked) {
         targetElement.classlist.add("completed");
     } else {
-        targetElement.classlist.remove("complelted");
+        targetElement.classList.remove("complelted");
     }
 }
 
