@@ -22,8 +22,15 @@ function onTodoListContainerClicked(event){
     while (!targetElement.classlist.contains("task")){
         targetElement = targetElement.parentElement;
     }
+    var checkbox = targetElement.querySelector(".checkbox");
+    if (checkbox.checked){
+        targetElement.classlist.add("completed")
+    } else {
+        targetElement.classlist.remove("complelted")
+    }
 }
 
 // Step 3 link to event handler 
 //Link the Event to the Functionality 
 addTaskButton.addEventListener('click', onAddTaskClicked);
+todoListContainer.addEventListener('click', onTodoListContainerClicked);
