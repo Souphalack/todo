@@ -16,10 +16,11 @@ function onAddTaskClicked(event){
     
     todoListContainer.insertAdjacentHTML('afterbegin', taskHTML);
 }
-
+//when an Event occurs, the event contains info about the element that was clicked 
+// Take the target element, if the target element NOT contain Task - get its parent
 function onTodoListContainerClicked(event){
     while (!targetElement.classlist.contains("task")){
-        targetElement = targetElement.
+        targetElement = targetElement.parentElement;
     }
 }
 
