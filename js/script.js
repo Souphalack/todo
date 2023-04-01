@@ -18,9 +18,10 @@ function onAddTaskClicked(event){
 }
 //when an Event occurs, the event contains info about the element that was clicked 
 // Take the target element, if the target element NOT contain Task - get its parent
-function onTodoListContainerClicked(event){
+function onTodoListContainerClicked(event) {
     var targetElement = event.target;
-    while (!targetElement.classlist.contains("task")) {
+
+    while (!targetElement.classList.contains("task")) {
         targetElement = targetElement.parentElement;
     }
 
@@ -36,4 +37,4 @@ function onTodoListContainerClicked(event){
 // Step 3 link to event handler 
 //Link the Event to the Functionality 
 addTaskButton.addEventListener('click', onAddTaskClicked);
-todoListContainer.addEventListener('click', onTodolistClicked);
+todoListContainer.addEventListener('click', onTodoListClicked);
