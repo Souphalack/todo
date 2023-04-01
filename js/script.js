@@ -24,9 +24,9 @@ function onTodoListContainerClicked(event){
     }
     var checkbox = targetElement.querySelector(".checkbox");
     if (checkbox.checked){
-        targetElement.classlist.add("completed")
+        targetElement.classlist.add("completed");
     } else {
-        targetElement.classlist.remove("complelted")
+        targetElement.classlist.remove("complelted");
     }
 }
 
