@@ -6,6 +6,7 @@ var todoListContainer = document.getElementById("todo-list");
 
 var showActiveButton = document.getElementById("show-active")
 var showAllButton = document.getElementById("show-all")
+var showCompletedButton = document.getElementById("show-complted")
 
 var templateElement = document.getElementById("list-item-template");
 var template = templateElement.innerHTML;
@@ -23,7 +24,24 @@ function onAddTaskClicked(event) {
     todoListContainer.insertAdjacentHTML('beforeend', taskHTML);
 }
 
+function showAllTasks(){
+    var tasks = document.getElementsByClassName('task');
+    for (let i = 0; i < tasks.length; i++){
+        tasks[i].style.display = "block"
+    }
+}
 
+function showCompletedTasks(){
+    var tasks = document.getElementsByClassName("task");
+    for (let i = 0; i < tasks.length; i++){
+        if (tasks[i].classList.contains("completed")){
+            // set the display property to "block"
+            tasks[i].style.display = "block";
+        } else {
+            tasks[i].style.display = "none";
+        }
+    }
+}
 function showActiveTasks() {
     var tasks = document.getElementsByClassName('task')
     console.log(tasks);
@@ -64,3 +82,5 @@ function onTodolistClicked(event) {
 addTaskButton.addEventListener('click', onAddTaskClicked);
 todoListContainer.addEventListener('click', onTodolistClicked);
 showActiveButton.addEventListener('click', showActiveTasks)
+showAllButton.addEventListener('click', showAllTasks)
+showCompletedButton.addEventListener('click', showCompletedTasks)
