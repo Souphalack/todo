@@ -5,6 +5,7 @@ var newTaskInput = document.getElementById("task-input");
 var todoListContainer = document.getElementById("todo-list");
 
 var showActiveButton = document.getElementById("show-active")
+var showAllButton = document.getElementById("show-all")
 
 var templateElement = document.getElementById("list-item-template");
 var template = templateElement.innerHTML;
@@ -21,6 +22,7 @@ function onAddTaskClicked(event) {
     
     todoListContainer.insertAdjacentHTML('beforeend', taskHTML);
 }
+
 
 function showActiveTasks() {
     var tasks = document.getElementsByClassName('task')
