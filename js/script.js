@@ -3,6 +3,9 @@
 var addTaskButton = document.getElementById("add-task");
 var newTaskInput = document.getElementById("task-input");
 var todoListContainer = document.getElementById("todo-list");
+
+var showActiveButton = document.getElementById("show-active")
+
 var templateElement = document.getElementById("list-item-template");
 var template = templateElement.innerHTML;
 
@@ -17,6 +20,11 @@ function onAddTaskClicked(event) {
 
     
     todoListContainer.insertAdjacentHTML('beforeend', taskHTML);
+}
+
+function showActiveTasks() {
+    var tasks = document.getElementsByClassName('task')
+    console.log(task);
 }
 //when an Event occurs, the event contains info about the element that was clicked 
 // Take the target element, if the target element NOT contain Task - get its parent
