@@ -6,7 +6,7 @@ var todoListContainer = document.getElementById("todo-list");
 
 var showActiveButton = document.getElementById("show-active")
 var showAllButton = document.getElementById("show-all")
-var showCompletedButton = document.getElementById("show-complted")
+var showCompletedButton = document.getElementById("show-completed")
 
 var templateElement = document.getElementById("list-item-template");
 var template = templateElement.innerHTML;
