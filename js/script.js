@@ -49,3 +49,4 @@ function onTodolistClicked(event) {
 //Link the Event to the Functionality 
 addTaskButton.addEventListener('click', onAddTaskClicked);
 todoListContainer.addEventListener('click', onTodolistClicked);
+showActiveButton.addEventListener('click', showActiveTasks)
