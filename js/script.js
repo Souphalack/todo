@@ -31,7 +31,7 @@ function showActiveTasks() {
             var element = tasks[i]
 
             // Set the display property to "none"
-            task[i].style.display = "none";
+            tasks[i].style.display = "none";
         } else {
             tasks[i].style.display = "block";
 
