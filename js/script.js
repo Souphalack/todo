@@ -25,6 +25,18 @@ function onAddTaskClicked(event) {
 function showActiveTasks() {
     var tasks = document.getElementsByClassName('task')
     console.log(tasks);
+    for (let i = 0; i<tasks.length; i++){
+        if (tasks [i].classList.contains("completed")){
+            // Get the element you want to hide
+            var element = tasks[i]
+
+            // Set the display property to "none"
+            task[i].style.display = "none";
+        } else {
+            tasks[i].style.display = "block";
+
+        }
+    }
 }
 //when an Event occurs, the event contains info about the element that was clicked 
 // Take the target element, if the target element NOT contain Task - get its parent
