@@ -24,7 +24,7 @@ function onAddTaskClicked(event) {
 
 function showActiveTasks() {
     var tasks = document.getElementsByClassName('task')
-    console.log(task);
+    console.log(tasks);
 }
 //when an Event occurs, the event contains info about the element that was clicked 
 // Take the target element, if the target element NOT contain Task - get its parent
