@@ -85,10 +85,20 @@ function onTodolistClicked(event) {
     }
     var taskNameElement = targetElement.querySelector(".task-name")
     var taskName = taskNameElement.innerText;
-    
+
     saveTasks(taskName, checkbox.checked)
 }
 
+function renderTasks(){
+    for (i = 0; i< localStorage.length; i++){
+        var taskName = localStorage.key(i)
+        var isCompleted = localStorage.getItem(taskName) =="true";
+        var taskHTML = template.replace("<-- TASK_NAME -->", taskName);
+        if (!isCompleted){
+            todoListContainer.insertAdjacentHTML('afterbegin', taskHTML);
+        }
+    }
+}
 // Step 3 link to event handler 
 //Link the Event to the Functionality 
 addTaskButton.addEventListener('click', onAddTaskClicked);
