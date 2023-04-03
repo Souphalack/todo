@@ -8,8 +8,14 @@ var showActiveButton = document.getElementById("show-active")
 var showAllButton = document.getElementById("show-all")
 var showCompletedButton = document.getElementById("show-completed")
 
+/* Locate Where <script> tag which contains our template */
 var templateElement = document.getElementById("list-item-template");
+/* Var get the template, which is just all teh HTML btw the  <script> tag */
 var template = templateElement.innerHTML;
+
+function saveTasks(name, isCompleted){
+    localStorage.setItem(name, isCompleted);
+} 
 
 // Step 2 Write the behaviour
 // Write the fuctionality 
@@ -20,8 +26,10 @@ function onAddTaskClicked(event) {
    
     var taskHTML = template.replace("<!-- TASK_NAME -->", taskName);
 
-    
+    /* So the HTML has been update, lets insert the HTML into the DOM tree */
     todoListContainer.insertAdjacentHTML('beforeend', taskHTML);
+
+    saveTasks(taskName, false)
 }
 
 function showAllTasks(){
@@ -75,6 +83,10 @@ function onTodolistClicked(event) {
     } else {
         targetElement.classList.remove("completed");
     }
+    var taskNameElement = targetElement.querySelector(".task-name")
+    var taskName = taskNameElement.innerText;
+    
+    saveTasks(taskName, checkbox.checked)
 }
 
 // Step 3 link to event handler 
